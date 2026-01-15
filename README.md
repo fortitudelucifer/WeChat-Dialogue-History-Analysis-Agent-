@@ -192,8 +192,14 @@ with OUT.open("w", encoding="utf-8") as f:
         res = model.generate(input=str(path), hotword=HOTWORD)
         f.write(json.dumps({
             "file": fn,
-            "engine": "FunASR paraformer-zh + fsmn-vad + ct-punc",
-            "result": res,
+            "engine": "faster-whisper large-v3 + ct-punc",
+            "raw_text": raw_text,
+            "raw_text_s": raw_text_s,
+            "raw_for_punc": raw_for_punc,
+            "prep_meta": prep_meta,
+            "punct_text": punct_text,
+            "patches": patches,
+            "segments": segs,
         }, ensure_ascii=False) + "\n")
 
 print("Wrote:", OUT)
