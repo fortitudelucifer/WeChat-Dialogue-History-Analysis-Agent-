@@ -1,5 +1,5 @@
 # WeChat-Dialogue-History-Analysis-Agent-
-
+memotrace的毛病是语音通话的时长这个记录没保留
 ## 数据清洗和映射
 ### 语音模态的参数有
 seq_in_html	msg_uid	MsgSvrID	token	ts	time_local	speaker	type	sub_type	modality	text_raw	media_path	voice_length	voice_to_text
