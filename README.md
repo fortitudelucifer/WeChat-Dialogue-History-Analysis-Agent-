@@ -482,12 +482,30 @@ pip install OpenCC
 
 （PyPI 上的 OpenCC 包就是简繁转换库。）
 
+### 表情模态
+下载的分为可以直接显示的是webq
+而浏览器叫下载的是gif文件
+自动化下载表情成图片然后做映射
 
+### 撤回消息的也得提取出来（英文是recalled，中文是撤回就行）
+recall message 前面的speaker字段是other的话是对方撤回信息
+而speaker是me的话则是我方撤回消息
 
+### 引用信息
+注意让agent提取引用信息时要记住索引引用的信息
+
+### 匿名化
+pip install pyyaml -q
+
+### 存在的问题
+中文的他/她和它的问题
+
+### 视频模态
+都是短视频
 
 ### 原始数据转写
 总体思路（以后换任何联系人都能复用）
-HTML 是主时间线（唯一真相）：因为它带 timestamp/is_send/type/text(媒体路径)/voice_to_text 等字段，能把多模态稳定绑定回时间轴。
+HTML 是主时间线（唯一真相）：因为它带 timestamp/is_send/type/text(媒体路径)/voice_to_text 等字段，能把多模态稳定绑定回时间轴。  
 CSV 主要用来做统计、校验（这个 CSV 没有 MsgSvrID 列名，所以更适合校验/统计，不做主键）。
 Step 1：从 HTML 里抓出 chatMessages 数组（JSON）
 导出 HTML 里有类似：
