@@ -1,5 +1,10 @@
 # WeChat-Dialogue-History-Analysis-Agent-
 memotrace的毛病是语音通话的时长这个记录没保留
+为了工程实践，原材料需要重新映射和分类
+flash-attn选用，显卡版本低的话，高的话就注意显卡驱动匹配。如果只需要适配某一个系列的显卡，可以限定在# 假设你只需要适配 RTX 50 系列 (sm_120)          export TORCH_CUDA_ARCH_LIST="12.0" 
+huggingface toekn注册后
+
+
 ## 数据清洗和映射
 ### 语音模态的参数有
 seq_in_html	msg_uid	MsgSvrID	token	ts	time_local	speaker	type	sub_type	modality	text_raw	media_path	voice_length	voice_to_text
@@ -502,6 +507,13 @@ pip install pyyaml -q
 
 ### 视频模态
 都是短视频
+2. 使用 4-bit 量化 (4-bit Quantization)
+这是目前在消费级显卡上跑大模型的核心黑科技。
+原始状态 (FP16/BF16)：模型里的每一个参数（权重）原本占用 2 字节（16位）空间。对于 7B（70亿参数）模型，仅权重本身就需要约 14GB 显存，再加上视觉编码器（VL模型特有）和对话产生的上下文（KV Cache），16GB 显存会瞬间爆满。
+量化后 (4-bit)：通过特殊算法（如 AWQ 或 BitsAndBytes），将原本 16 位的参数压缩到只有 4 位。
+体积骤减：权重占用的显存从 14GB 压缩到约 4GB - 5GB。
+性能权衡：虽然精度会有极其微小的损失，但在 2026 年的量化技术下，这种损失在实际对话和识图中几乎察觉不到。
+
 
 ### 原始数据转写
 总体思路（以后换任何联系人都能复用）
