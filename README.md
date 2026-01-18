@@ -15,6 +15,9 @@ YAMNet 或 PANNs
 
 加入社会动力学
 
+本地载入abliterated时遇到阻碍，失败了，试了几种顺序和方案
+换了 Q4_K_M.gguf
+
 ## 数据清洗和映射
 ### 语音模态的参数有
 seq_in_html	msg_uid	MsgSvrID	token	ts	time_local	speaker	type	sub_type	modality	text_raw	media_path	voice_length	voice_to_text
