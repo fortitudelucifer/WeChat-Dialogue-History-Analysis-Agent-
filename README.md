@@ -5,8 +5,15 @@ flash-attn选用，显卡版本低的话，高的话就注意显卡驱动匹配�
 huggingface toekn注册后
 router和01run的det和rec问题
 解决out of memory爆显存的问题
-显存的碎片化处理
+显存的碎片化处理，内存和显存的管理
 撤回态
+
+对了了多个模型的效果
+openSMILE eGeMAPS
+YAMNet 或 PANNs
+中文 HuBERT + CASIA
+
+加入社会动力学
 
 ## 数据清洗和映射
 ### 语音模态的参数有
