@@ -3,7 +3,10 @@ memotrace的毛病是语音通话的时长这个记录没保留
 为了工程实践，原材料需要重新映射和分类
 flash-attn选用，显卡版本低的话，高的话就注意显卡驱动匹配。如果只需要适配某一个系列的显卡，可以限定在# 假设你只需要适配 RTX 50 系列 (sm_120)          export TORCH_CUDA_ARCH_LIST="12.0" 
 huggingface toekn注册后
-
+router和01run的det和rec问题
+解决out of memory爆显存的问题
+显存的碎片化处理
+撤回态
 
 ## 数据清洗和映射
 ### 语音模态的参数有
