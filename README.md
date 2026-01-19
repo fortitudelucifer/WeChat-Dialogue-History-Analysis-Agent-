@@ -15,8 +15,10 @@ YAMNet 或 PANNs
 
 加入社会动力学
 
-本地载入abliterated时遇到阻碍，失败了，试了几种顺序和方案
-换了 Q4_K_M.gguf
+本地载入Llama-3.2-11B-Vision-abliterated时遇到阻碍，失败了，试了几种顺序和方案 
+换了 Q4_K_M.gguf leafspark 的 Llama-3.2-11B-Vision-Instruct.Q4_K_M.gguf，也失败了 0.6.8 ollama 0.10.1
+
+换路径了
 
 ## 数据清洗和映射
 ### 语音模态的参数有
